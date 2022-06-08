@@ -1,0 +1,13 @@
+body{
+    padding-bottom: 30px;
+}
+
+.btn, .form-control, .p{
+    margin-top: 5px;
+    position: relative;
+}
+
+.text-center input{
+    width:25%;
+    margin-left:37%;
+}

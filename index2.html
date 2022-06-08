@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="https://factoriaf5.org/wp-content/uploads/2021/09/Favicon-Factoria-F5-Web.png" type="image/x-icon" />
+    <title>Ejercicios JS - Strings</title>
+    
+    <!--Template based on URL below-->
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Place your stylesheet here-->
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Ejercicios JS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Ejercicios con numeros</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Ejercicios con Strings<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <main role="main" class="container">
+
+        <div id="ex1" class="form-group text-center mt-5 pt-5">
+            <h3>1. Crea una función para convertir en mayúscula la primera letra de un texto.</h3>
+            <input class="form-control" id="lowerCaseText" type="text" placeholder="Introduce un texto.">
+            <button class="btn btn-success" onclick="functionUpperCase(document.getElementById('lowerCaseText').value, document.getElementById('ex1'))">Mayuscula</button>
+        </div>
+        
+        <div id="ex2" class="form-group text-center mt-5 pt-5">
+            <h3>2. Crea una función para convertir en mayúscula la primera letra de cada palabra de un texto.</h3>
+            <input class="form-control" id="lowerCaseText2" type="text" placeholder="Introduce varias palabras.">
+            <button class="btn btn-success" onclick="functionUpperCaseAll(document.getElementById('lowerCaseText2').value, document.getElementById('ex2'))">Todas mayuscula</button>
+        </div>
+        
+        <div id="ex3" class="form-group text-center mt-5 pt-5">
+            <h3>3. Crea una función para saber cuántas letras tiene una palabra.</h3>
+            <input class="form-control" id="palabra" type="text" placeholder="Introduce una palabra.">
+            <button class="btn btn-success" onclick="functionLengthWord(document.getElementById('palabra').value, document.getElementById('ex3'))">Cuantas letras?</button>
+        </div>
+        
+        <div id="ex4" class="form-group text-center mt-5 pt-5">
+            <h3>4. Crea una función que cuente las vocales de un texto.</h3>
+            <input class="form-control" id="vocales" type="text" placeholder="Introduce un texto.">
+            <button class="btn btn-success" onclick="functionVowelsWord(document.getElementById('vocales').value, document.getElementById('ex4'))">Cuantas vocales?</button>
+        </div>
+
+    </main><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="https://factoriaf5.org/wp-content/uploads/2021/09/Favicon-Factoria-F5-Web.png" type="image/x-icon" />
+    <title>Ejercicios JS - Numeros</title>
+    
+    <!--Template based on URL below-->
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Ejercicios JS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Ejercicios con numeros <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index2.html">Ejercicios con Strings</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <main role="main" class="container">
+
+        <div id="ex1" class="text-center mt-5 pt-5">
+            <h3>1. Crea una función que reciba un número y determine si es par o impar.</h3>
+            <input class="form-control" min='1' id="parImpar" type="number" value="1">
+            <button class="btn btn-success" onclick="functionParImpar(document.getElementById('parImpar').value, document.getElementById('ex1')) ">Par o Impar?</button>
+        </div>
+        
+        <div id="ex2" class="text-center mt-5 pt-5">
+            <h3>2. Crea un función que reciba dos números y determine cuál es el mayor.</h3>
+            <input class="form-control" id="mayorMenor1" type="number" value="0">
+            <input class="form-control" id="mayorMenor2" type="number" value="0">
+            <button class="btn btn-success" onclick="functionMayorMenor(document.getElementById('mayorMenor1').value, document.getElementById('mayorMenor2').value, document.getElementById('ex2'))">Mayor o Menor?</button>
+        </div>
+        
+        <div id="ex3" class="text-center mt-5 pt-5">
+            <h3>3. Crea una función que reciba un número y determine si es par, divisible por 3, divisible por 5 y divisible por 9.</h3>
+            <input class="form-control" min='1' id="prime" type="number" value="1">
+            <button class="btn btn-success" onclick="functionDivision(document.getElementById('prime').value, document.getElementById('ex3'))">Descubrelo!</button>
+        </div>
+        
+        <div id="ex4" class="form-group text-center mt-5 pt-5">
+            <h3>4. Crea una función que reciba un array de números y devuelva el resultado de la suma de todos los números.</h3>
+            <input class="form-control" min='0' id="number1" type="number" value="0">
+            <input class="form-control" min='0' id="number2" type="number" value="0">
+            <input class="form-control" min='0' id="number3" type="number" value="0">
+            <button class="btn btn-success" onclick="functionSuma(document.getElementById('number1').value, document.getElementById('number2').value, document.getElementById('number3').value, document.getElementById('ex4'))">Sumalos</button>
+        </div>
+        
+        <div id="ex5" class="form-group text-center mt-5 pt-5">
+            <h3>5. Crea una función que reciba un número y devuelva su factorial.</h3>
+            <input class="form-control" min='1' id="factorial" type="number" value="1">
+            <button class="btn btn-success" onclick="functionFactorial(document.getElementById('factorial').value, document.getElementById('ex5'))">Factorial</button>
+        </div>
+        
+        <div id="ex6" class="text-center mt-5 pt-5">
+            <h3>6. Crea una función que reciba un número y determine si es un número primo.</h3>
+            <input class="form-control" min='1' id="primeNumber" type="number" value="1">
+            <button class="btn btn-success" onclick="functionPrimo(document.getElementById('primeNumber').value, document.getElementById('ex6'))">Es primo?</button>
+        </div>
+        
+        <div id="ex7" class="text-center mt-5 pt-5">
+            <h3>7. Crea una función que devuelva la secuecia fibonacci.</h3>
+            <input class="form-control" min='1' id="fibonacci" type="number" value="1">
+            <button class="btn btn-success" onclick="functionFibonacci(document.getElementById('fibonacci').value, document.getElementById('ex7'))">Fibonacci</button>
+        </div>
+        
+        <div id="ex8" class="text-center mt-5 pt-5">
+            <h3>8. Crea una función que determine cuál es el número mayor de un array de números.</h3>
+            <input class="form-control" min='0' id="arrayGreater1" type="number" value="0">
+            <input class="form-control" min='0' id="arrayGreater2" type="number" value="0">
+            <input class="form-control" min='0' id="arrayGreater3" type="number" value="0">
+            <button class="btn btn-success" onclick="functionGreaterThan(document.getElementById('arrayGreater1').value, document.getElementById('arrayGreater2').value, document.getElementById('arrayGreater3').value, document.getElementById('ex8'))">Cual es mayor?</button>
+        </div>
+        
+        <div id="ex9" class="text-center mt-5 pt-5">
+            <h3>9. Crea una función que determine cuál es el número menor de un array de números.</h3>
+            <input class="form-control" min='0' id="arrayLower1" type="number" value="0">
+            <input class="form-control" min='0' id="arrayLower2" type="number" value="0">
+            <input class="form-control" min='0' id="arrayLower3" type="number" value="0">
+            <button class="btn btn-success" onclick="functionLowerThan(document.getElementById('arrayLower1').value, document.getElementById('arrayLower2').value, document.getElementById('arrayLower3').value, document.getElementById('ex9'))">Cual es menor?</button>
+        </div>
+        
+        <div id="ex10" class="text-center mt-5 pt-5">
+            <h3>10. Crea una función que devuelva el número mayor y el número menor de un array de números.</h3>
+            <input class="form-control" min='0' id="arrayDifference1" type="number" value="0">
+            <input class="form-control" min='0' id="arrayDifference2" type="number" value="0">
+            <input class="form-control" min='0' id="arrayDifference3" type="number" value="0">
+            <button class="btn btn-success" onclick="functionDifference(document.getElementById('arrayDifference1').value, document.getElementById('arrayDifference2').value, document.getElementById('arrayDifference3').value, document.getElementById('ex10'))">Mayor y menor</button>
+        </div>
+        
+    </main><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
