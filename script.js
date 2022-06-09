@@ -40,23 +40,46 @@ function functionDivision(num, div){
   let textToAdd = document.createTextNode("");  
   addClass(p);
   
+  let count = 0;
   if(num%2 == 0){
-      textToAdd = document.createTextNode(num + ' es par.  //  ');
+      textToAdd = document.createTextNode(num + ' es par.');
+      count+=1;
       p.appendChild(textToAdd);
   }
   if(num%3 == 0){
-      textToAdd = document.createTextNode(num + ' es divisible por 3.  //  ');
+      if(count>=1){
+         textToAdd =  document.createTextNode('  //  ' + num + ' es divisible por 3.');
+         }
+      else{
+         textToAdd = document.createTextNode(num + ' es divisible por 3.'); 
+      }
+      count+=1;
       p.appendChild(textToAdd);
   }
   if(num%5 == 0){
-    textToAdd = document.createTextNode(num + ' es divisible por 5.  //  ');
+    if(count>=1){
+         textToAdd =  document.createTextNode('  //  ' + num + ' es divisible por 5.');
+         }
+      else{
+         textToAdd = document.createTextNode(num + ' es divisible por 5.'); 
+      }
+      count+=1;
       p.appendChild(textToAdd);
-    
   }
   if(num%9 == 0){
-    textToAdd = document.createTextNode(num + ' es divisible por 9.  //  ');
+    if(count>=1){
+         textToAdd = document.createTextNode('  //  ' + num + ' es divisible por 9.');
+         }
+      else{
+         textToAdd = document.createTextNode(num + ' es divisible por 9.'); 
+      }
+      count+=1;
       p.appendChild(textToAdd); 
   }
+  else if(count===0){
+    textToAdd = document.createTextNode(num + " no es cap d'aquestes coses.");
+    p.appendChild(textToAdd); 
+  }    
    
   textToParagraph(div, p);
 }
@@ -143,7 +166,12 @@ function functionFibonacci(term, div) {
   p.appendChild(textToAdd);
 
   for (let i = 1; i <= term; i++) {
-    textToAdd = document.createTextNode(n1 + ' // ');
+    if(term == 1 || i == term){
+        textToAdd = document.createTextNode(n1);
+    }
+    else{
+        textToAdd = document.createTextNode(n1 + ' // ');
+    }
     p.appendChild(textToAdd);
     nextTerm = n1 + n2;
     n1 = n2;
@@ -166,7 +194,7 @@ function functionGreaterThan(num1, num2, num3, div) {
     return b - a;
   });
 
-  p.innerHTML = 'Els numeros ordenats de major a menor són: ' + array;     
+  p.innerHTML = 'Els numeros ordenats de major a menor són: ' + array.join(' ');
    
   textToParagraph(div, p);
 }
@@ -184,7 +212,7 @@ function functionLowerThan(num1, num2, num3, div) {
     return a - b;
   });
 
-  p.innerHTML = 'Els numeros ordenats de menor a major són: ' + array;     
+  p.innerHTML = 'Els numeros ordenats de menor a major són: ' + array.join(' ');     
    
   textToParagraph(div, p);
 }
@@ -240,8 +268,8 @@ function functionLengthWord(string, div) {
   
   let p = createPargraph();
   addClass(p);
-    
-  p.innerHTML = 'Esta palbra tiene ' + string.length + ' caracteres.';
+  string = string.replace(/\s/g, ''); 
+  p.innerHTML = 'Esta palabra tiene ' + string.length + ' caracteres.';
    
   textToParagraph(div, p);
 }
@@ -254,10 +282,9 @@ function functionVowelsWord(string, div) {
   
   let lowerCase = string.toLowerCase();
   // find the count of vowels
-  let count = lowerCase.match(/[aeiou]/gi).length;
-
+  let count = lowerCase.match(/[aeiou]/gi)||[];
   // return number of vowels
-  p.innerHTML = 'Esta palbra tiene ' + count + ' vocales.';
+  p.innerHTML = 'Esta palbra tiene ' + count.length + ' vocales.';
    
   textToParagraph(div, p);
 }
